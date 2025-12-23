@@ -6,6 +6,7 @@ import Breadcrumbs from "@components/Breadcrums";
 import { useParams } from "react-router-dom";
 import Subsidebar from "./Subsidebar";
 import useCategories from "@hooks/useCategories";
+import ChatWidget from "../components/ChatWidget";
 const App = (props) => {
   const { id, category } = useParams();
   const { categories } = useCategories(id);
@@ -51,6 +52,7 @@ const App = (props) => {
           </div>
         </div>
       </main>
+      <ChatWidget />
     </>
   );
 };
